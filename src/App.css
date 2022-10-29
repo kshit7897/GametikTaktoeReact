@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+body {
+  width: 100px;
+  height: 100vh;
+  background-image: url(https://i.pinimg.com/originals/46/2f/56/462f56d9c11e41741daae2c35c70f069.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Board-row {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.Board-square {
+  background-image: linear-gradient(45deg, black, orange);
+  font-size: 20px;
+  border: 1px solid white;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-container {
+  min-width: 350px;
+  /* max-width: 400px; */
+  /* margin: 0 auto; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.won-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-i {
+  padding: 7px 25px;
+  font-size: larger;
+  font-weight: bolder;
+  /* background-image: linear-gradient(45deg, black, white); */
+  background: #000;
+  color: aliceblue;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-bottom: 20px;
+}
+.game-name {
+  border-radius: 10px;
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(45deg, green, blue, red);
+}
+.won-text {
+  color: white;
+}
+.won {
+  border: none;
+  outline: none;
+  background-image: linear-gradient(90deg, red, blue);
+  border-radius: 10px;
 }
